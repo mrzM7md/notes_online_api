@@ -2,10 +2,10 @@
 
 include "../connect.php";
 
-$name = filterRequest(requestName: "name");
-$username = filterRequest(requestName: "username");
-$email = filterRequest(requestName: "email");
-$password = filterRequest(requestName: "password");
+$name = filterPostRequest(requestName: "name");
+$username = filterPostRequest(requestName: "username");
+$email = filterPostRequest(requestName: "email");
+$password = filterPostRequest(requestName: "password");
 
 $statment = $con->
                     prepare('INSERT INTO `users` (`name`, `username`, `email`, `password`) 
