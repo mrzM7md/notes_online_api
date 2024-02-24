@@ -2,7 +2,7 @@
 
 include "../connect.php";
 
-$user_id = $_GET['user'];
+$user_id = filterGetRequest('user');
 
 $statment = $con-> prepare('SELECT * FROM `notes` WHERE `user_id` = ?');
 

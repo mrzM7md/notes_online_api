@@ -5,8 +5,7 @@ include "../connect.php";
 $username = filterPostRequest(requestName: "username");
 $password = filterPostRequest(requestName: "password");
 
-$statment = $con->
-                    prepare('SELECT * FROM `users` WHERE (`username` = ? OR `email` = ?) AND `password` = ? ');
+$statment = $con-> prepare('SELECT * FROM `users` WHERE (`username` = ? OR `email` = ?) AND `password` = ? ');
 
 $statment->execute(array($username, $username, $password));
 
